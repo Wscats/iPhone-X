@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+		<title></title>
+		<style media="screen">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				width: 100%;
+				height: 100%;
+				background-color: #A4F4B0;
+			}
+			
+			header {
+				padding-left: constant(safe-area-inset-left);
+				/*padding-right: constant(safe-area-inset-left);*/
+				/*padding: constant(safe-area-inset-top) constant(safe-area-inset-right) 0 constant(safe-area-inset-left);*/
+				background-color: red;
+				height: 50px;
+				line-height: 50px;
+				width: 100%;
+				color: white;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				padding-top: constant(safe-area-inset-top);
+			}
+			
+			footer {
+				background-color: red;
+				height: 50px;
+				line-height: 50px;
+				width: 100%;
+				color: white;
+				position: fixed;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				bottom: 0px;
+				padding-left: constant(safe-area-inset-left);
+				/*padding-right: constant(safe-area-inset-right);*/
+				padding-bottom: constant(safe-area-inset-bottom);
+			}
+			
+			button {
+				display: inline-block;
+				background-color: blue;
+				color: white;
+				border: none;
+				height: 50px;
+				width: 80px;
+				font-size: 18px;
+			}
+			
+			ul {
+				padding-left: constant(safe-area-inset-left);
+				padding-right: constant(safe-area-inset-right) list-style: none;
+				width: 100%;
+				background-color: #A4F4B0;
+			}
+			
+			li {
+				list-style: none;
+				height: 50px;
+				width: 100%
+			}
+			/*iPhoneX的适配*/
+			@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+				header {
+					background-color: black;
+				}
+			}
+			@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+				header {
+					background-color: black;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<button type="button" name="button">返回</button> 头部
+		</header>
+		<ul>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+			<li>第一条</li>
+		</ul>
+		<footer>
+			<button type="button" name="button">返回</button> 底部
+		</footer>
+	</body>
+
+</html>
