@@ -184,9 +184,7 @@ padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(
 - 横屏下，对底部设置左，下，右的`safe-area-inset-*`，对头部设置左和右的`safe-area-inset-*`，其他设置也是无意义的
 
 ```html
-<header>
-	<button>返回</button> 头部
-</header>
+<header><button>返回</button> 头部</header>
 <style>
 	* {margin: 0;padding: 0;}
 	body {
