@@ -181,6 +181,12 @@ padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(
 ![image](https://user-images.githubusercontent.com/17243165/32719362-12474910-c89b-11e7-82a0-6a8a9c7c32d7.png)
 
 示例，比如下面是顶部导航条的适配，能让左上右都能出现padding来让元素保留在安全区域以内
+
+总结为，我们可以利用`safe-area-inset-*`做以下适配，详细请看[DEMO](https://wscats.github.io/iPhone-X/css-shape-iphoneX/iPhoneX5.html)
+
+- 竖屏下，对底部做`padding-bottom: constant(safe-area-inset-bottom);`，其他设置是无意义的
+- 横屏下，对底部设置左，下，右的`safe-area-inset-*`，对头部设置左和右的`safe-area-inset-*`，其他设置也是无意义的
+
 ```html
 <header>
 	<button>返回</button> 头部
