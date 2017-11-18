@@ -23,7 +23,7 @@
 			}
 			
 			header {
-				padding-left: constant(safe-area-inset-left);
+				/*padding-left: constant(safe-area-inset-left);*/
 				/*padding-right: constant(safe-area-inset-left);*/
 				/*padding: constant(safe-area-inset-top) constant(safe-area-inset-right) 0 constant(safe-area-inset-left);*/
 				background-color: red;
@@ -52,7 +52,7 @@
 				bottom: 0;
 				bottom: 0px;
 				/*padding: 8px;*/
-				padding-left: constant(safe-area-inset-left);
+				/*padding-left: constant(safe-area-inset-left);*/
 				/*padding-right: constant(safe-area-inset-right);*/
 				/*padding-bottom: constant(safe-area-inset-bottom);*/
 			}
@@ -78,6 +78,8 @@
 				height: 50px;
 				width: 100%
 			}
+			
+			@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {}
 		</style>
 	</head>
 
@@ -126,4 +128,5 @@
 			<button type="button" name="button">返回</button> 底部
 		</footer>
 	</body>
+
 </html>
