@@ -127,10 +127,6 @@ window.devicePixelRatio
 
 2K分辨率指的是屏幕分辨率达到了一种级别,指屏幕横向像素达到2000以上（iPhone X是2K屏）
 
-# 手淘适配方案
-
-[lib-flexible](https://github.com/amfe/lib-flexible)
-
 # iPhoneX的适配
 
 ## background-color
@@ -233,10 +229,35 @@ padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(
 </style>
 ```
 
+## 媒体查询
+
+|||
+|-|-|
+|device-width|屏幕高(独立像素)|
+|device-height|屏幕宽(独立像素)|
+|-webkit-device-pixel-ratio|dpr|
+
+注意`-webkit-device-pixel-ratio`必须加前缀，否则无效
+```css
+/*iPhoneX的适配*/
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	header {
+		background-color: black;
+	}
+}
+/*iPhone8P的适配*/
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+	header {
+		background-color: deepskyblue;
+	}
+}
+```
+
 # 参考文档
 
 - [移动端高清、多屏适配方案](http://www.html-js.com/article/Mobile-terminal-H5-mobile-terminal-HD-multi-screen-adaptation-scheme%203041)
 - [手淘移动端适配的方案学习和相关思考](http://blog.csdn.net/liujie19901217/article/details/51982403)
+- [手淘适配方案lib-flexible](https://github.com/amfe/lib-flexible)
 
 # iPhone X适配参考文档
 - [iPhone X的Web设计](https://www.w3cplus.com/mobile/designing-websites-for-iphone-x.html)

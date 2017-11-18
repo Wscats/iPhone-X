@@ -1,23 +1,16 @@
-* {
-	margin: 0;
-	padding: 0;
+/*iPhoneX的适配*/
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	header {
+		background-color: black;
+	}
 }
 
-html,
-body {
-	height: 100%;
-}
 
-#content {
-	height: 100%;
-	overflow: auto;
-}
+/*iPhone8P的适配*/
 
-#liuhai {
-	width: 30px;
-	height: 320px;
-	clip-path: polygon(0 0, 30px 30px, 30px 200px, 0 230px);
-	background-color: #A4F4B0;
-	shape-outside: polygon(0 0, 30px 30px, 30px 200px, 0 230px);
-	float: left;
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+	header {
+		background-color: deepskyblue;
+	}
 }
