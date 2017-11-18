@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            max-width: 800px;
+            height: 480px;
+            border: solid #000;
+            background-color: #d0d0d0;
+            margin: 100px auto;
+            overflow: auto;
+        }
+        .shape {
+            float: left;
+            width: 30px; height: 340px;
+            shape-outside: polygon(0 0, 0 145px, 21px 149px, 35px 166px, 35px 314px, 21px 33
+            1px, 0 335px, 0 0);
+            transition: shape-outside .15s;
+        }
+        .liuhai {
+            width: 24px; height: 180px;
+            background: url(liu.png) no-repeat left center;
+            position: absolute;
+            margin-top: 150px;
+        }
+        .content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .content li {
+            padding: .5rem
+        } 
+    </style>
+</head>
+
+<body>
+    <div id="box" class="box">
+        <i id="shape" class="shape"></i>
+        <i class="liuhai"></i>
+        <div class="content">
+            <ul>
+                <li>为何 我还没有开始就有</li>
+                <li>好似与生俱来的 我不是非酋</li>
+                <li>别说 我没有太多借口</li>
+                <li>我也不会轻言放手 我不享受这种特有</li>
+                <li>谁说天生幸运就应该被唾弃着</li>
+                <li>我后天努力来超越先前进的</li>
+                <li>特权在我的手里hater在眼气呢</li>
+                <li>看我上升到天际来看嘲笑我的</li>
+                <li>我说hold on hold on 想灭掉我的慢着</li>
+                <li>在追赶我的路上 空间还有很大呢</li>
+                <li>我就是欧皇 来让你紧张</li>
+                <li>我就像人民币的玩家永远猖狂</li>
+                <li>为何 我还没有开始就有</li>
+                <li>好似与生俱来的 我不是非酋</li>
+                <li>别说 我没有太多借口</li>
+                <li>我也不会轻言放手 我不享受这种特有</li>
+                <li>谁说天生幸运就应该被唾弃着</li>
+                <li>我后天努力来超越先前进的</li>
+                <li>特权在我的手里hater在眼气呢</li>
+                <li>看我上升到天际来看嘲笑我的</li>
+                <li>我说hold on hold on 想灭掉我的慢着</li>
+                <li>在追赶我的路上 空间还有很大呢</li>
+                <li>我就是欧皇 来让你紧张</li>
+                <li>我就像人民币的玩家永远猖狂</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var shape = document.getElementById('shape');
+        var box = document.getElementById('box');
+        // 保证shape元素高度足够
+        shape.style.height = box.scrollHeight + 'px';
+
+        var funShape = function () {
+            var scrollTop = box.scrollTop;
+            // 滚动偏移应用在shape-outside上
+            var shapeOutside = 'polygon(0 0, 0 ' + (145 + scrollTop) + 'px, 21px ' + (149 + scrollTop) +
+                'px, 35px ' + (166 + scrollTop) + 'px, 35px ' + (314 + scrollTop) + 'px, 21px ' + (331 + scrollTop) +
+                'px, 0 ' + (335 + scrollTop) + 'px, 0 0)';
+            shape.style.shapeOutside = shapeOutside;
+        };
+        // 滚动时候实时改变shape形状
+        box.addEventListener('scroll', funShape);
+        funShape();
+    </script>
+</body>
+
+</html>

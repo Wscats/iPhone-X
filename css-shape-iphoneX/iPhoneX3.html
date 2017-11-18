@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<!-- 设置允许全屏 -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- 状态栏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title></title>
+</head>
+
+<body>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html,
+		body {
+			height: 100%;
+		}
+
+		ul,
+		li {
+			list-style: none;
+		}
+
+		#content {
+			height: 100%;
+			overflow: auto;
+		}
+
+		#liuhai {
+			width: 30px;
+			height: 230px;
+			clip-path: polygon(0 0, 30px 30px, 30px 200px, 0 230px);
+			background-color: #A4F4B0;
+			shape-outside: polygon(0 0, 30px 30px, 30px 200px, 0 230px);
+			float: left;
+		}
+	</style>
+	<div id="content">
+		<!--刘海-->
+		<div id="liuhai"></div>
+		<!--列表-->
+		<ul>
+			<li>a11111111111111111111111111</li>
+			<li>b11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+			<li>11111111111111111111111111</li>
+		</ul>
+	</div>
+	<script>
+		var content = document.querySelector("#content");
+		var liuhai = document.querySelector("#liuhai");
+		// 默认刘海没居中屏幕时候，为屏幕上边界
+		var offsetPos = 0;
+		// 封装刘海的位置
+		function setToufalianPos(y) {
+			var shape = `polygon(0  ${y}px, 30px ${y + 30}px, 30px ${y + 200}px, 0 ${y + 230}px)`;
+			console.log(shape);
+			liuhai.style.clipPath = liuhai.style.shapeOutside = shape;
+			console.log(liuhai);
+		}
+
+		function init() {
+			// 计算刘海垂直居中时候，距离屏幕上下边界时候的长度
+			var y = offsetPos = (content.clientHeight - liuhai.clientHeight) / 2;
+			console.log(content.clientHeight, liuhai.clientHeight, offsetPos)
+			// 动态设置刘海垂直居中
+			setToufalianPos(y)
+			// 设置刘海的高度height，因为在刘海下移之后刘海本来的高度会遮盖住自己本身
+			// 所以得重新设置刘海本身的高度
+			liuhai.style.height = content.scrollHeight + "px";
+		}
+		init();
+
+
+		content.onscroll = function(e) {
+			var y = this.scrollTop + offsetPos;
+			setToufalianPos(y);
+		}
+
+		//判断浏览器是否全屏
+    // 因为safari会在浏览的时候自动出现导航条，导航条会影响我们的刘海位置
+		function isFullScreen() {
+			var bool =(document.body.scrollHeight == window.screen.height && document.body.scrollWidth == window.screen.width);
+			alert(document.body.scrollHeight)
+			alert(window.screen.height)
+			return
+		}
+		isFullScreen()
+	</script>
+</body>
+
+</html>

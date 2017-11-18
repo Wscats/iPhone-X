@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+#content {
+	height: 100%;
+	overflow: auto;
+}
+
+#liuhai {
+	width: 30px;
+	height: 320px;
+	clip-path: polygon(0 0, 30px 30px, 30px 200px, 0 230px);
+	background-color: #A4F4B0;
+	shape-outside: polygon(0 0, 30px 30px, 30px 200px, 0 230px);
+	float: left;
+}
