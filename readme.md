@@ -144,7 +144,7 @@ window.devicePixelRatio
 <!--或-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=contain">
 <!--网页内容完全覆盖可视窗口-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=auto">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 ```
 
 |viewport-fit|描述|示例|示例|示例|
