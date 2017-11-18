@@ -149,9 +149,9 @@ window.devicePixelRatio
 |cover|页面内容充满屏幕|[示例1](https://wscats.github.io/iPhone-X/viewport-fit/cover/cover.html)|[示例2](https://wscats.github.io/iPhone-X/viewport-fit/cover/sefe-cover.html)|[示例3](https://wscats.github.io/iPhone-X/viewport-fit/min-max/)|
 |横屏列表侧刘海|横屏下列表环绕刘海|[示例1](https://wscats.github.io/iPhone-X/css-shape-iphoneX/iPhoneX3.html)|
 
-### 设置auto前
+设置auto前
 ![image](https://user-images.githubusercontent.com/17243165/32718857-6d1c3b0e-c899-11e7-9b70-7bb980cd022d.png)
-### 设置cover后
+设置cover后
 ![image](https://user-images.githubusercontent.com/17243165/32718849-6434b66a-c899-11e7-893d-8eb05d2615c6.png)
 
 ## safe-area-inset-*
@@ -187,28 +187,15 @@ padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(
 <header>
 	<button>返回</button> 头部
 </header>
-<style media="screen">
-	* {
-		margin: 0;
-		padding: 0;
-	}
+<style>
+	* {margin: 0;padding: 0;}
 	body {
-		width: 100%;
-		height: 100%;
+		width: 100%;height: 100%;
 		//设置背景颜色，也是一种适配方案
 		background-color: #A4F4B0;
 	}
 	header {
-		background-color: red;
-		height: 50px;
-		line-height: 50px;
-		width: 100%;
-		color: white;
-		position: fixed;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0px;
+		background-color: red;height: 50px;line-height: 50px;width: 100%;color: white;position: fixed;left: 0;right: 0;top: 0;bottom: 0px;
 		//cover下元素出现对应的padding来适配
 		padding-left: constant(safe-area-inset-left);
 		padding-right: constant(safe-area-inset-right);
@@ -217,12 +204,7 @@ padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(
 	}
 	
 	button {
-		display: inline-block;
-		background-color: blue;
-		color: white;
-		border: none;
-		height: 50px;
-		width: 80px;
+		display: inline-block;background-color: blue;color: white;border: none;height: 50px;width: 80px;
 		//字体记得必须设置，不然按钮会有像素的误差
 		font-size: 18px;
 	}
