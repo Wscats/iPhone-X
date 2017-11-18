@@ -180,6 +180,53 @@ padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(
 ```
 ![image](https://user-images.githubusercontent.com/17243165/32719362-12474910-c89b-11e7-82a0-6a8a9c7c32d7.png)
 
+示例，比如下面是顶部导航条的适配，能让左上右都能出现padding来让元素保留在安全区域以内
+```html
+<header>
+	<button>返回</button> 头部
+</header>
+<style media="screen">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		width: 100%;
+		height: 100%;
+		//设置背景颜色，也是一种适配方案
+		background-color: #A4F4B0;
+	}
+	header {
+		background-color: red;
+		height: 50px;
+		line-height: 50px;
+		width: 100%;
+		color: white;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0px;
+		//cover下元素出现对应的padding来适配
+		padding-left: constant(safe-area-inset-left);
+		padding-right: constant(safe-area-inset-right);
+		//padding-bottom: constant(safe-area-inset-bottom);
+		padding-top: constant(safe-area-inset-top);
+	}
+	
+	button {
+		display: inline-block;
+		background-color: blue;
+		color: white;
+		border: none;
+		height: 50px;
+		width: 80px;
+		//字体记得必须设置，不然按钮会有像素的误差
+		font-size: 18px;
+	}
+</style>
+```
+
 # 参考文档
 
 - [移动端高清、多屏适配方案](http://www.html-js.com/article/Mobile-terminal-H5-mobile-terminal-HD-multi-screen-adaptation-scheme%203041)
